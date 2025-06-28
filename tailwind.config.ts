@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom portfolio colors
+				'electric-blue': '#0066FF',
+				'tech-gray': '#2D3748',
+				'syntax-green': '#10B981',
+				'code-orange': '#FF6B35'
+			},
+			fontFamily: {
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				'mono': ['JetBrains Mono', 'monospace'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +94,41 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float-gentle': {
+					'0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+					'25%': { transform: 'translateY(-10px) rotate(1deg)' },
+					'50%': { transform: 'translateY(-15px) rotate(0deg)' },
+					'75%': { transform: 'translateY(-5px) rotate(-1deg)' }
+				},
+				'float-code': {
+					'0%, 100%': { transform: 'translateY(0px) translateX(0px) rotate(0deg)', opacity: '0.7' },
+					'25%': { transform: 'translateY(-20px) translateX(10px) rotate(2deg)', opacity: '0.8' },
+					'50%': { transform: 'translateY(-25px) translateX(0px) rotate(0deg)', opacity: '0.9' },
+					'75%': { transform: 'translateY(-10px) translateX(-10px) rotate(-2deg)', opacity: '0.8' }
+				},
+				'typing': {
+					'from': { width: '0' },
+					'to': { width: '100%' }
+				},
+				'blink': {
+					'0%, 50%': { borderColor: 'transparent' },
+					'51%, 100%': { borderColor: '#0066FF' }
+				},
+				'parallax-float': {
+					'0%, 100%': { transform: 'translate3d(0, 0, 0) rotate(0deg)' },
+					'33%': { transform: 'translate3d(30px, -30px, 0) rotate(120deg)' },
+					'66%': { transform: 'translate3d(-20px, 20px, 0) rotate(240deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float-gentle': 'float-gentle 6s ease-in-out infinite',
+				'float-code': 'float-code 8s ease-in-out infinite',
+				'typing': 'typing 3s steps(30) 1s forwards',
+				'blink': 'blink 1s infinite',
+				'parallax-float': 'parallax-float 20s linear infinite'
 			}
 		}
 	},

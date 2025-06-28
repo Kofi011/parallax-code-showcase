@@ -1,29 +1,98 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Doe | IT Student Portfolio</title>
-    <meta name="description" content="Dynamic IT Student Portfolio with Interactive Parallax Design" />
-    <meta name="author" content="John Doe - IT Student at UPSA" />
-
-    <meta property="og:title" content="John Doe | IT Student Portfolio" />
-    <meta property="og:description" content="Dynamic IT Student Portfolio with Interactive Parallax Design" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
+    <meta name="description" content="Dynamic IT Student Portfolio with Interactive Parallax Design">
+    <meta name="author" content="John Doe - IT Student at UPSA">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-  </head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>&lt;JD /&gt;</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Parallax Background -->
+    <div id="parallax-container">
+        <div class="parallax-layer bg-layer"></div>
+        <div class="parallax-layer mid-layer"></div>
+        <div class="parallax-layer fg-layer"></div>
+    </div>
+
+    <!-- Floating Elements -->
+    <div id="floating-elements"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">John Doe</h1>
+            <div class="hero-subtitle">
+                <span id="typing-text"></span>
+                <span class="cursor">|</span>
+            </div>
+            <p class="hero-description">
+                Passionate IT student at UPSA, crafting digital solutions and exploring 
+                the endless possibilities of technology. Welcome to my interactive portfolio.
+            </p>
+            <div class="hero-buttons">
+                <a href="projects.html" class="btn btn-primary">Explore My Code</a>
+                <a href="contact.html" class="btn btn-secondary">Let's Connect</a>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse-animation"></div>
+                <p>Scroll to explore</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div>&lt;JD /&gt;</div>
+                    <p>IT Student | Code Enthusiast | Future Developer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="skills.html">Skills</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 John Doe. Built with HTML, CSS & lots of ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/parallax.js"></script>
+    <script src="js/floating-elements.js"></script>
+    <script src="js/typing-animation.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
